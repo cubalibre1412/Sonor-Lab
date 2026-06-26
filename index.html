@@ -19,11 +19,12 @@
       body::after { content: ""; position: fixed; inset: 0; z-index: -1; opacity: .25; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.38'/%3E%3C/svg%3E"); }
       a { color: inherit; }
       .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 500; color: var(--ink); }
-      .brand-mark { width: 36px; height: 36px; flex: 0 0 auto; filter: drop-shadow(0 0 14px rgba(97,244,222,.32)); }
+      .brand-mark { width: 34px; height: 34px; flex: 0 0 auto; object-fit: contain; filter: drop-shadow(0 0 14px rgba(97,244,222,.26)); }
       .brand-text { letter-spacing: .14em; }
-      .hero-logo { display: inline-flex; align-items: center; gap: 16px; color: var(--aqua); }
-      .hero-logo .brand-mark { width: 52px; height: 52px; }
-      .brand-line { width: 72px; height: 1px; background: linear-gradient(90deg, var(--aqua), transparent); }
+      .hero-logo { display: block; width: min(620px, 100%); margin-bottom: 28px; padding: 18px; border: 1px solid rgba(237,247,244,.14); border-radius: 24px; background: rgba(255,255,255,.94); box-shadow: 0 22px 70px rgba(0,0,0,.22); }
+      .hero-logo img { display: block; width: 100%; height: auto; }
+      .hero-logo--missing { display: none; color: var(--muted); font-size: 12px; margin-bottom: 18px; }
+      .brand-line { display: none; }
       .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
       .topbar { display: flex; justify-content: space-between; align-items: center; padding: 23px 0; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
       .topbar a { text-decoration: none; color: var(--muted); }
@@ -51,17 +52,22 @@
       .links a { padding: 9px 12px; border: 1px solid var(--line); text-decoration: none; font-size: 12px; transition: .15s; }
       .links a:hover { border-color: var(--coral); color: var(--coral); }
       footer { padding: 34px 0 56px; display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-size: 11px; }
-      @media (max-width: 650px) { .brand-text { letter-spacing: .08em; } .hero-logo .brand-mark { width: 44px; height: 44px; } .wrap { width: min(100% - 28px, 1120px); } .topbar { font-size: 10px; } .hero { min-height: 55vh; padding: 62px 0 72px; } section { padding: 62px 0; } .section-heading, .album { grid-template-columns: 1fr; gap: 17px; } .section-heading { margin-bottom: 32px; } .blog-card { padding: 21px; } footer { flex-direction: column; } }
+      @media (max-width: 650px) { .brand-text { letter-spacing: .08em; } .brand-mark { width: 30px; height: 30px; } .hero-logo { margin-bottom: 22px; padding: 12px; border-radius: 18px; } .wrap { width: min(100% - 28px, 1120px); } .topbar { font-size: 10px; } .hero { min-height: 55vh; padding: 62px 0 72px; } section { padding: 62px 0; } .section-heading, .album { grid-template-columns: 1fr; gap: 17px; } .section-heading { margin-bottom: 32px; } .blog-card { padding: 21px; } footer { flex-direction: column; } }
     </style>
   </head>
   <body>
     <header class="wrap topbar">
-      <span class="brand"><svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="Sonor Lab logo"><defs><linearGradient id="sonorGradient" x1="8" y1="8" x2="56" y2="56"><stop stop-color="#61f4de"/><stop offset=".55" stop-color="#dff26a"/><stop offset="1" stop-color="#9f8cff"/></linearGradient></defs><circle cx="32" cy="32" r="27" fill="none" stroke="url(#sonorGradient)" stroke-width="4"/><path d="M18 34c5.5-11 22.5-11 28 0" fill="none" stroke="#edf7f4" stroke-width="4" stroke-linecap="round"/><path d="M18 43c6.5-6 21.5-6 28 0" fill="none" stroke="#61f4de" stroke-width="4" stroke-linecap="round"/><circle cx="23" cy="24" r="3.5" fill="#dff26a"/><circle cx="41" cy="24" r="3.5" fill="#9f8cff"/></svg><span class="brand-text">Sonor Lab</span></span>
+      <span class="brand"><img class="brand-mark" src="sonor-lab-icon.png" alt="Sonor Lab 로고 심볼" onerror="this.style.display='none'" /><span class="brand-text">Sonor Lab</span></span>
       <a href="#music">Music works ↓</a>
     </header>
     <main>
       <section class="wrap hero">
-        <span class="hero-logo"><svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="Sonor Lab logo"><defs><linearGradient id="sonorGradientHero" x1="8" y1="8" x2="56" y2="56"><stop stop-color="#61f4de"/><stop offset=".55" stop-color="#dff26a"/><stop offset="1" stop-color="#9f8cff"/></linearGradient></defs><circle cx="32" cy="32" r="27" fill="none" stroke="url(#sonorGradientHero)" stroke-width="4"/><path d="M18 34c5.5-11 22.5-11 28 0" fill="none" stroke="#edf7f4" stroke-width="4" stroke-linecap="round"/><path d="M18 43c6.5-6 21.5-6 28 0" fill="none" stroke="#61f4de" stroke-width="4" stroke-linecap="round"/><circle cx="23" cy="24" r="3.5" fill="#dff26a"/><circle cx="41" cy="24" r="3.5" fill="#9f8cff"/></svg><span class="brand-line"></span><span class="eyebrow">Blog / Projects / Music works</span></span>
+        <picture class="hero-logo">
+          <source srcset="sonor-lab-blog-title.png" media="(max-width: 700px)" />
+          <img src="sonor-lab-logo.png" alt="Sonor Lab. AI Native Creative Lab — Create · Analyze · Experiment" onerror="this.closest('.hero-logo').style.display='none'; document.querySelector('.hero-logo--missing').style.display='block';" />
+        </picture>
+        <span class="hero-logo--missing">이미지가 보이지 않으면 `sonor-lab-logo.png`, `sonor-lab-blog-title.png`, `sonor-lab-icon.png` 파일을 index.html과 같은 위치에 업로드해 주세요.</span>
+        <span class="eyebrow">Blog / Projects / Music works</span>
         <h1>Sonor Lab,<br />notes in motion.</h1>
         <p>Sonor Lab은 블로그를 중심으로 일상과 생각, 창작의 과정을 정리하는 공간입니다. 음악 작업은 그 안에서 이어지는 하나의 프로젝트로, Monthly Shannon의 앨범과 노래들을 함께 기록합니다.</p>
         <a class="jump" href="#blog">블로그로 이동 ↓</a>
@@ -95,4 +101,4 @@
     </main>
     <footer class="wrap"><span>© Sonor Lab</span><a href="https://hyperfollow.com/monthlyshannon" target="_blank" rel="noopener noreferrer">Official music page ↗</a></footer>
   </body>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </html>
+</html>
