@@ -1,16 +1,13 @@
-Exit code: 0
-Wall time: 1.1 seconds
-Output:
 <!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Monthly Shannon의 음악과 SONOR LAB 블로그를 만나보세요." />
-    <meta property="og:title" content="Monthly Shannon — quiet songs for passing days" />
-    <meta property="og:description" content="앨범별 스트리밍 링크와 SONOR LAB 블로그." />
+    <meta name="description" content="Sonor Lab의 블로그, 기록, 그리고 하위 작업으로 이어지는 음악 프로젝트를 만나보세요." />
+    <meta property="og:title" content="Sonor Lab — records, projects, and music works" />
+    <meta property="og:description" content="SONOR LAB을 중심으로 한 블로그 기록과 음악 작업 링크." />
     <meta name="theme-color" content="#10181b" />
-    <title>Monthly Shannon</title>
+    <title>Sonor Lab</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
@@ -35,6 +32,64 @@ Output:
       section { padding: 90px 0; border-bottom: 1px solid var(--line); }
       .section-heading { display: grid; grid-template-columns: 1fr 2fr; gap: 35px; margin-bottom: 46px; }
       .section-heading h2 { margin: 0; font-size: clamp(36px, 5vw, 62px); line-height: 1; }
+      .section-heading p { margin: 0; color: var(--muted); max-width: 510px; }
+      .blog-card { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 28px; border: 1px solid var(--line); text-decoration: none; background: rgba(16,24,27,.46); transition: .18s ease; }
+      .blog-card:hover { transform: translateY(-4px); border-color: var(--lime); background: rgba(223,242,106,.1); }
+      .blog-card strong { font-family: "Nanum Myeongjo", serif; font-size: clamp(25px, 4vw, 42px); }
+      .blog-card span { color: var(--lime); white-space: nowrap; font-size: 12px; }
+      .albums { border-top: 1px solid var(--line); }
+      .album { display: grid; grid-template-columns: 260px 1fr; gap: 28px; padding: 29px 0; border-bottom: 1px solid var(--line); }
+      .album h3 { margin: 0; font-family: "Nanum Myeongjo", serif; font-size: clamp(23px, 3vw, 31px); line-height: 1.2; }
+      .album-no { color: var(--orange); font-size: 11px; display: block; margin-bottom: 9px; letter-spacing: .1em; }
+      .links { display: flex; flex-wrap: wrap; gap: 9px; align-content: start; }
+      .links a { padding: 9px 12px; border: 1px solid var(--line); text-decoration: none; font-size: 12px; transition: .15s; }
+      .links a:hover { border-color: var(--orange); color: var(--orange); }
+      footer { padding: 34px 0 56px; display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-size: 11px; }
+      @media (max-width: 650px) { .wrap { width: min(100% - 28px, 1120px); } .topbar { font-size: 10px; } .hero { min-height: 55vh; padding: 62px 0 72px; } section { padding: 62px 0; } .section-heading, .album { grid-template-columns: 1fr; gap: 17px; } .section-heading { margin-bottom: 32px; } .blog-card { padding: 21px; } footer { flex-direction: column; } }
+    </style>
+  </head>
+  <body>
+    <header class="wrap topbar">
+      <span>Sonor Lab</span>
+      <a href="#music">Music works ↓</a>
+    </header>
+    <main>
+      <section class="wrap hero">
+        <span class="eyebrow">Blog / Projects / Music works</span>
+        <h1>Sonor Lab,<br />notes in motion.</h1>
+        <p>Sonor Lab은 블로그를 중심으로 일상과 생각, 창작의 과정을 정리하는 공간입니다. 음악 작업은 그 안에서 이어지는 하나의 프로젝트로, Monthly Shannon의 앨범과 노래들을 함께 기록합니다.</p>
+        <a class="jump" href="#blog">블로그로 이동 ↓</a>
+      </section>
+      <section class="wrap" id="blog">
+        <div class="section-heading">
+          <h2>SONOR<br />LAB</h2>
+          <p>Sonor Lab의 중심은 네이버 블로그입니다. 글과 기록, 프로젝트의 맥락을 먼저 살펴보고 그 아래에서 음악 작업을 이어서 만날 수 있습니다.</p>
+        </div>
+        <a class="blog-card" href="https://blog.naver.com/sonor_lab" target="_blank" rel="noopener noreferrer">
+          <strong>Sonor Lab 블로그 방문하기</strong><span>blog.naver.com/sonor_lab ↗</span>
+        </a>
+      </section>
+      <section class="wrap" id="music">
+        <div class="section-heading">
+          <h2>Music<br />works</h2>
+          <p>음악은 Sonor Lab 안에서 이어지는 하위 작업입니다. Monthly Shannon으로 발표한 앨범과 관련 음원을 원하는 스트리밍 플랫폼에서 골라 들어보세요.</p>
+        </div>
+        <div class="albums">
+          <article class="album"><div><span class="album-no">01 / SINGLE</span><h3>Monthly Shannon, Vol. 1</h3></div><div class="links"><a href="https://open.spotify.com/album/2MNqxd5AFeIYZOpOqByspm?si=FXkpGQywQWuCxLgKfGhRRw" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://youtube.com/playlist?list=OLAK5uy_lBGaUk3l8heuJatCR14uch9LRwFrL5LHQ&si=82AhUqLcCTYMCH4B" target="_blank" rel="noopener noreferrer">YouTube Music</a><a href="https://music.apple.com/us/album/monthly-shannon-vol-1-single/1815062240?uo=4&app=itunes&at=1001lry3&ct=dashboard" target="_blank" rel="noopener noreferrer">Apple Music</a></div></article>
+          <article class="album"><div><span class="album-no">02 / SINGLE</span><h3>Monthly Shannon, Vol. 2</h3></div><div class="links"><a href="https://open.spotify.com/album/28IzHdCSC8fLAHyN4FK4uS?si=KLM7kaemT16UfbDN1Cg8bQ" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://youtube.com/playlist?list=OLAK5uy_kZob0xXTCXmXA5UTx-iSpqDIuAmlmXchw&si=3O6Z1MgsS9Z0utig" target="_blank" rel="noopener noreferrer">YouTube Music</a><a href="https://music.apple.com/us/album/monthly-shannon-vol-2-single/1816050836" target="_blank" rel="noopener noreferrer">Apple Music</a></div></article>
+          <article class="album"><div><span class="album-no">03 / EP</span><h3>Monthly Shannon, Vol. 3</h3></div><div class="links"><a href="https://open.spotify.com/album/3JZ2AYLgkv6Ya0eobFxelB" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://youtube.com/playlist?list=OLAK5uy_kPdi5q-KzCX5VDfHsQTsSQTMJKIsJBmt4&si=EM0qdZ9uJgkxXitg" target="_blank" rel="noopener noreferrer">YouTube Music</a><a href="https://music.apple.com/us/album/monthly-shannon-vol-3-ep/1816334179" target="_blank" rel="noopener noreferrer">Apple Music</a></div></article>
+          <article class="album"><div><span class="album-no">04 / SINGLE</span><h3>Monthly Shannon, Vol. 4</h3></div><div class="links"><a href="https://open.spotify.com/album/0P6ulhmw3ye0sESweBU572" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://youtube.com/playlist?list=OLAK5uy_k2NiLL5tZtoIjGLgV4D3yFdTVqKuo9tVQ&feature=shared" target="_blank" rel="noopener noreferrer">YouTube Music</a><a href="https://music.apple.com/us/album/monthly-shannon-vol-4-single/1819192992?uo=4" target="_blank" rel="noopener noreferrer">Apple Music</a></div></article>
+          <article class="album"><div><span class="album-no">05 / SINGLE</span><h3>Monthly Shannon, Vol. 5</h3></div><div class="links"><a href="https://open.spotify.com/album/7Gf6k2LI8l20i0SugxwG2h" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://youtube.com/playlist?list=OLAK5uy_mRACKOZqzmuYLqukTArnTvnU1m7XdCxrE&feature=shared" target="_blank" rel="noopener noreferrer">YouTube Music</a><a href="https://music.apple.com/us/album/monthly-shannon-vol-5-single/1822067094?uo=4" target="_blank" rel="noopener noreferrer">Apple Music</a></div></article>
+          <article class="album"><div><span class="album-no">06 / EP</span><h3>WE RUN DOOSAN!</h3></div><div class="links"><a href="https://open.spotify.com/album/0ktItRy53i2ohXLfPZNkAs?si=UnfrvARRRxK_qSstAZoDTw" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://youtube.com/playlist?list=OLAK5uy_k_wit5UcilvnalB-GcXBDqPtYjZKnuJ8Q&feature=shared&feature=shared" target="_blank" rel="noopener noreferrer">YouTube Music</a><a href="https://music.apple.com/us/album/we-run-doosan-ep/1834355971" target="_blank" rel="noopener noreferrer">Apple Music</a><a href="https://kko.kakao.com/eCPdd5kQRw" target="_blank" rel="noopener noreferrer">Melon</a><a href="http://mw.genie.co.kr/detail/albumInfo?axnm=86640679" target="_blank" rel="noopener noreferrer">Genie</a></div></article>
+          <article class="album"><div><span class="album-no">07 / EP</span><h3>Monthly Shannon, Vol. 6</h3></div><div class="links"><a href="https://spotify.link/vUsKOiAwyXb" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://youtube.com/playlist?list=OLAK5uy_mfZp2DbyoYdp_mpP6NxDLI15VeVyTNgg8&si=ngPpgwrbgjxb1Vn8" target="_blank" rel="noopener noreferrer">YouTube Music</a><a href="https://music.apple.com/us/album/monthly-shannon-vol-6-ep/1845722110" target="_blank" rel="noopener noreferrer">Apple Music</a></div></article>
+          <article class="album"><div><span class="album-no">08 / SINGLE</span><h3>Monthly Shannon, Vol. 7</h3></div><div class="links"><a href="https://open.spotify.com/album/402KlW8agxARJGAsPHh6hv" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://www.youtube.com/playlist?list=OLAK5uy_lM1c2h03dClOntN_xy4iuy3Vff0lxesws" target="_blank" rel="noopener noreferrer">YouTube Music</a></div></article>
+          <article class="album"><div><span class="album-no">09 / SINGLE</span><h3>No Signal, First Voice</h3></div><div class="links"><a href="https://open.spotify.com/album/72iiqLDXZfYZeQ9mp5tXDD?si=3NV-EZUqTa-fELVnu4-B2A" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://youtube.com/playlist?list=OLAK5uy_mHEhhKJYr39-pqbhjohvSNprgWF19zZyE&si=O6lA7nPhlP1Xeb9X" target="_blank" rel="noopener noreferrer">YouTube Music</a><a href="https://kko.to/pmJ_3AX2eU" target="_blank" rel="noopener noreferrer">Melon</a><a href="http://genie.co.kr/DWBVH4" target="_blank" rel="noopener noreferrer">Genie</a><a href="https://music.bugs.co.kr/album/20809753" target="_blank" rel="noopener noreferrer">Bugs!</a><a href="https://naver.me/Gqf8BEny" target="_blank" rel="noopener noreferrer">VIBE</a><a href="https://flomuz.io/s/a.EX76i" target="_blank" rel="noopener noreferrer">FLO</a></div></article>
+        </div>
+      </section>
+    </main>
+    <footer class="wrap"><span>© Sonor Lab</span><a href="https://hyperfollow.com/monthlyshannon" target="_blank" rel="noopener noreferrer">Official music page ↗</a></footer>
+  </body>
+</html>      .section-heading h2 { margin: 0; font-size: clamp(36px, 5vw, 62px); line-height: 1; }
       .section-heading p { margin: 0; color: var(--muted); max-width: 510px; }
       .blog-card { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 28px; border: 1px solid var(--line); text-decoration: none; background: rgba(16,24,27,.46); transition: .18s ease; }
       .blog-card:hover { transform: translateY(-4px); border-color: var(--lime); background: rgba(223,242,106,.1); }
